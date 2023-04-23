@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<style>
+    :root{
+        font-size: 12px;
+    }
+
+    body{
+        padding: 0;
+        margin: 0;
+        background-color: #191919;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 33vh);
+        align-items: middle;
+    }
+
+    .grid-item{
+        margin: auto;
+    }
+
+    .grid-item.text{
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+
+    .grid-item.gif1{
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+
+    .grid-item.gif2{
+        grid-column-start: 3;
+        grid-row-start: 2;
+    }
+
+    .grid-item.gif1 img, .grid-item.gif2 img{
+        height: 200px;
+        width: auto;
+    }
+
+    .grid-item p{
+        color: #e7e7e7;
+        font-family: sans-serif;
+        font-weight: 500;
+        font-size: 6rem;
+    }
+
+    .animation{
+        width: 50px;
+        height: 50px;
+        background-color: #A459D1;
+        position: relative;
+        animation-name: shift;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        left: -25px; 
+        top: 0;
+    }  
+
+    @keyframes shift {
+        0%   {background-color:#A459D1; left: -25px; top: 0;}
+        25%  {background-color:#F16767; left: 25px; top: 0;}
+        50%  {background-color:#FFB84C; left: 25px; top: 25px;}
+        75%  {background-color:#F5EAEA; left: -25px; top: 25px;}
+        100% {background-color:#A459D1; left: -25px; top: 0;}
+    }
+</style>
+<body>
+    <div class="grid">
+        <div class="grid-item gif1"><img src="https://i.ibb.co/j5jCyf1/Untitled-1.gif"></div>
+        <div class="grid-item text">
+            <!-- <div class="grid-item animation"></div> -->
+            <p>waiting...</p>
+        </div>
+        <div class="grid-item gif2"><img src="https://i.ibb.co/j5jCyf1/Untitled-1.gif"></div>
+    </div>
+</body>
+</html>
